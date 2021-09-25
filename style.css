@@ -1,0 +1,154 @@
+/*======================================
+  === Global styles and help classes ===
+  ======================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+:root {
+  /* Colors */
+  /* --white: #ffffff; */
+  --white: #f9faf8;
+  --light-grey: #e5e7eb;
+
+  --dark-bg: #1f2937;
+  --cta: #3882f6;
+
+  /* Font Weights */
+  --thin: 300;
+  --normal: 400;
+  --bold: 700;
+  --black: 900;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button,
+.btn {
+  width: max-content;
+  padding: 0.75rem 2.25rem;
+  border-radius: 7px;
+  color: var(--white);
+  font-weight: var(--normal);
+}
+
+/*=============================
+  === Header and Navigation ===
+  =============================*/
+
+header {
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.75rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: var(--bold);
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-list li {
+  opacity: 0.65;
+}
+
+.nav-list li:hover {
+  opacity: 1;
+}
+
+.hero {
+  padding: 7.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 3.375rem;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.left .title {
+  font-size: 3rem;
+  font-weight: var(--black);
+  line-height: 0.9;
+}
+
+.left .subtitle {
+  font-size: 1.125rem;
+  color: var(--light-grey);
+}
+
+.left .primary-cta {
+  /* background-color: var(--cta); */
+  background-image: linear-gradient(to right, var(--cta) 50%, white 50%);
+  background-size: 200%;
+  background-position: top left;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: background-position 150ms ease, color 200ms ease;
+}
+
+.left .primary-cta:hover {
+  background-position: top right;
+  color: var(--cta);
+}
+
+.right {
+  background-color: #6d747d;
+  width: 32.625rem;
+  height: 14.8125rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*==============
+  === Footer ===
+  ==============*/
+
+footer {
+  height: 6.25rem;
+  background-color: var(--dark-bg);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
